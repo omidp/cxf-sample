@@ -3,6 +3,7 @@ package cxf;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
+import javax.xml.bind.annotation.XmlElement;
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class OrderProcessImpl implements OrderProcess
 {
     @WebMethod(operationName="process")
-    public void process(@WebParam(name="order") Order order)
+    public void process(@WebParam(name = "Order") @XmlElement(required = true, nillable = false) Order order)
     {
         System.out.println("Order No : " + order.getNo());
     }

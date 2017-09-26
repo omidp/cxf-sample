@@ -1,0 +1,5 @@
+<mappings>	
+	<mapping name="Order">
+		<property name="no" mappedName="no" style="attribute" />
+	</mapping>
+</mappings>

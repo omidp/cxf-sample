@@ -15,12 +15,13 @@ public class Client
 
     public static void main(String args[]) throws Exception
     {
-        URL wsdlURL = new URL(WSDL_LOCATION);
-        Service service = Service.create(wsdlURL, SERVICE_NAME);
-        OrderProcess port = service.getPort(PORT_NAME, OrderProcess.class);
-        Order order = new Order();
-        order.setNo("0550");
-        port.process(order);
+         URL wsdlURL = new URL(WSDL_LOCATION);
+         Service service = Service.create(wsdlURL, SERVICE_NAME);
+         OrderProcess port = service.getPort(PORT_NAME, OrderProcess.class);
+         Order order = new Order();
+         order.setNo("0550");
+         port.process(order);
+
         
     }
 
